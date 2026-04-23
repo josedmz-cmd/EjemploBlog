@@ -3,7 +3,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Publicacion {
+class Publicacion {
 	private static int consecutivo = 1;
 	private int codigo;
 	private LocalDateTime fechaPublicacion;
