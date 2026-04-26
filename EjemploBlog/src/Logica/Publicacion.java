@@ -1,6 +1,8 @@
 package Logica;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.ArrayList;
 
 class Publicacion {
@@ -79,4 +81,12 @@ class Publicacion {
 			throw new Exception("Comentario no válido.");
 		comentarios.remove(pos);
 	}
+	
+	public ArrayList obtenerDiscucion() {
+		ArrayList<String> discucion = new ArrayList<String>();
+		for (Comentario c : comentarios)
+			discucion.add(c.getTexto());
+		return discucion;
+	}
+
 }
