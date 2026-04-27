@@ -45,4 +45,26 @@ public class Controladora {
 		}
 		return listaBlogs;
 	}
+	
+	public String obtenerPublicacion(int codigoBlog, int codigoPublicacion) throws Exception {
+		if (!blogs.containsKey(codigoBlog)) 
+			throw new Exception("El código de blog no es válido.");
+		Blog b = blogs.get(codigoBlog);
+		String p = b.obtenerPublicacion(codigoPublicacion);
+		return p;
+	}
+	
+	public void agregarComentario(int codigoBlog, int codigoPublicacion, String email, String ip, String texto) throws Exception {
+		if (!blogs.containsKey(codigoBlog)) 
+			throw new Exception("El código de blog no es válido.");
+		Blog b = blogs.get(codigoBlog);
+		b.agregarComentario(codigoPublicacion, email, ip, texto);
+	}
+	
+	public void borrarComentario(int codigoBlog, int codigoPublicacion, int pos) throws Exception {
+		if (!blogs.containsKey(codigoBlog)) 
+			throw new Exception("El código de blog no es válido.");
+		Blog b = blogs.get(codigoBlog);
+		b.borrarComentario(codigoPublicacion, pos);
+	}
 }
