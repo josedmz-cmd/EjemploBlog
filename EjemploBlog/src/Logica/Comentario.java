@@ -41,6 +41,11 @@ class Comentario {
 	public LocalDateTime getFechaCreacion() {
 		return fechaCreacion;
 	}
-	
-	
+	//Hay que hacer toString
+	public String toString() {
+		String resultado = "Comentado por: " + email + " - ";
+		resultado += fechaCreacion.toString() + "\n\n";
+		resultado += texto + "\n\n";
+		return resultado;
+	}
 }

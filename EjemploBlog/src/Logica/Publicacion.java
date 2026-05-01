@@ -82,11 +82,4 @@ class Publicacion {
 		comentarios.remove(pos);
 	}
 	
-	public ArrayList obtenerDiscucion() {
-		ArrayList<String> discucion = new ArrayList<String>();
-		for (Comentario c : comentarios)
-			discucion.add(c.getTexto());
-		return discucion;
-	}
-
 }
